@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <title>ZeroCool</title>
+  <style>
+    body {
+      background-color: #54A0DA;
+      font-family: 'Roboto', sans-serif;
+      color: black;
+    }
+    #output-container {
+      margin: 0px 50px 70px 50px;
+      width: 600px;
+    	column-count: 4;
+    	column-gap: 10px;
+      border: 1px solid #eee;
+      background-color: #fff;
+      padding: 40px 0px 40px 40px;
+    }
+
+    #output-container-header {
+      margin-top: 50px;
+      margin-left: 50px;
+      margin-bottom: -20px;
+      color: white;
+    }
+
+    h4 { margin: 0px;}
+
+  </style>
+</head>
+<body onload="zerocool()">
+
+  <div id="output-container-header"><h1>ZeroCool</h1></div>
+  <div id="output-container"></div>
+
+
+<script>
+
+// Write a program that prints the numbers from 1 to 100. But for
+// multiples of three print "Zero" instead of the number and for
+// multiples of five print "Cool". For numbers which are multiples of
+// both three and five print "ZeroCool"
+
+
+for(i = 1; i < 101; i++){
+
+    if(i % 3 === 0 && i % 5 === 0){
+       console.log("ZeroCool")
+    } else if (i % 3 === 0) {
+       console.log("Zero")
+    } else if (i % 5 === 0) {
+       console.log("Cool")
+    } else {
+      console.log(i)
+    }
+}
+
+function zerocool(){
+
+  let output = ''
+  for(i = 1; i < 101; i++){
+
+    if(i % 3 === 0 && i % 5 === 0){
+      output += '<h4>ZeroCool</h4>'
+      console.log("ZeroCool")
+    } else if (i % 3 === 0) {
+      output += '<h4>Zero</h4>'
+      console.log("Zero")
+    } else if (i % 5 === 0) {
+      output += '<h4>Cool</h4>'
+      console.log("Cool")
+    } else {
+      output += '<h4>'+ i +'</h4>'
+      console.log(i)
+    }
+
+  }
+  document.getElementById("output-container").innerHTML = output
+  console.log('output', output)
+}
+
+</script>
+
+</body>
+</html>
