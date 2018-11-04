@@ -1,4 +1,4 @@
-# zeroCool
+# ZeroCool
 
 This is one of three Developer Quiz exercises meant to measure creativity and critical thinking as well as gauge technical prowess. Requested as part of Forum Communications interview process.
 
